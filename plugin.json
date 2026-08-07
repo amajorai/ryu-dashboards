@@ -1,0 +1,18 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ryu.dashboards",
+  "version": "1.0.0",
+  "description": "Dashboards: composable widget boards that assemble live views over monitors, meetings, quests, and other Core surfaces via soft HTTP loopback. Declares the out-of-process ryu-dashboards sidecar (kind:local) that owns the store + refresh loop + /api/dashboards/* surface, served to the desktop through the generic ext-proxy public_mount. Started eagerly (not lazy) so the kernel hardware device-dashboard renderer + nudge loop can reach it at boot / on a device poll before any desktop has opened Home. The dashboard_builder MCP runnable + the hardware render seam reach it over loopback via dashboards_client.",
+  "keywords": [
+    "dashboards",
+    "widgets",
+    "monitoring",
+    "home"
+  ],
+  "extensions": {
+    "com.ryuhq.ryu": {
+      "id": "@ryu/dashboards",
+      "displayName": "Dashboards"
+    }
+  }
+}
