@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ryu.dashboards",
+  "version": "0.1.16",
+  "description": "Dashboards: composable widget boards that assemble live views from Composio actions, guarded HTTPS endpoints, and inline data. Declares the out-of-process ryu-dashboards sidecar (kind:local) that owns the store + refresh loop + /api/dashboards/* surface, served to the desktop through the generic ext-proxy public_mount. Started eagerly (not lazy) so the kernel hardware device-dashboard renderer + nudge loop can reach it at boot / on a device poll before any desktop has opened Home. The dashboard_builder MCP runnable and the hardware render seam reach it only through the dashboards.* capabilities it provides.",
+  "author": {
+    "name": "Ryu",
+    "url": "https://ryuhq.com"
+  },
+  "homepage": "https://github.com/amajorai/ryu-dashboards",
+  "repository": "https://github.com/amajorai/ryu-dashboards",
+  "keywords": ["dashboards", "widgets", "monitoring", "home"],
+  "extensions": {
+    "com.ryuhq.ryu": {
+      "id": "@ryu/dashboards",
+      "displayName": "Dashboards"
+    }
+  }
+}
